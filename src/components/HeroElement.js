@@ -11,15 +11,30 @@ class HeroElement extends HTMLElement {
                 <input type="radio" name="slide" class="radio-nav" id="nav-3"/>
                 <ul class="slide">
                     <li class="slide-1">
-                        <img alt="Image 2 " src="./images/heros/hero-image_1.jpg" />
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="./images/heros/hero-image_2-small.jpg">
+                            <source media="(max-width: 701px)" srcset="./images/heros/hero-image_2-large.jpg">
+
+                            <img class="img__main lazyload" data-src="./images/heros/hero-image_2.jpg" alt="Meja dengan Makanan">
+                        </picture>
                         <div class="caption">Lorem Ipsum Dolor Sit Amet 1</div>
                     </li>
                     <li class="slide-2">
-                        <img alt="Image 2 " src="./images/heros/hero-image_2.jpg" />
+                        <picture>
+                            <source  media="(max-width: 600px)" srcset="./images/heros/hero-image_3-small.jpg">
+                            <source  media="(max-width: 701px)" srcset="./images/heros/hero-image_3-large.jpg">
+
+                            <img class="img__main lazyload" data-src="./images/heros/hero-image_3.jpg" alt="buah buahan">
+                        </picture>
                         <div class="caption">Lorem Ipsum Dolor Sit Amet 2</div>
                     </li>
                     <li class="slide-3">
-                        <img alt="Image 2 " src="./images/heros/hero-image_3.jpg " />
+                    <picture>
+                        <source  media="(max-width: 600px)" srcset="./images/heros/hero-image_4-small.jpg">
+                        <source  media="(max-width: 700px)" srcset="./images/heros/hero-image_4-large.jpg">
+
+                        <img class="img__main lazyload" data-src="./images/heros/hero-image_4.jpg" alt="warna hitam bintik putih">
+                    </picture>
                         <div class="caption">Lorem Ipsum Dolor Sit Amet 3</div>
                     </li>
                 </ul>

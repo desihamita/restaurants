@@ -8,7 +8,6 @@ const Home = {
                 <head-line></head-line>
                 <div class="latest">
                     <h1 class="latest__label">Restaurant Rekomendasi</h1>
-                    <arsech-bar></arsech-bar>
                     <div id="restaurants" class="restaurants">
                     </div>
                 </div>

@@ -8,7 +8,15 @@ class HeadLine extends HTMLElement {
     this.innerHTML = `
 			<article class="headline">
 				<figure class="headline__figure">
-					<img src="./images/heros/hero-image_2.jpg " alt="Dicoding Fact Sheet">
+					<picture>
+						<source type="image/webp" srcset="./images/heros/hero-image_1.webp">
+
+						<source type="image/webp" srcset="./images/heros/hero-image_1.jpg">
+
+						<source  media="(max-width: 700px)" srcset="./images/heros/hero-image_1-small.jpg">
+
+						<img class="img__main lazyload" data-src="./images/heros/hero-image_4.jpg" alt="warna hitam bintik putih">
+					</picture>
 					<figcaption>Dicoding February 2020 Infographic, 235k Members</figcaption>
 				</figure>
 				<div class="headline__content">

@@ -1,8 +1,10 @@
 import CONFIG from '../../globals/config';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const createDetailTemplate = (restaurant) => `
   <h2 class="resto__title">${restaurant.name}</h2>
-  <img class="resto__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
+  <img class="resto__poster lazyload" loading="lazy" type="jpg/webp" alt="${restaurant.name}" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"/>
   <div class="resto__info">
     <h3>Information</h3>
     <h4>Kota</h4>
@@ -35,8 +37,7 @@ const createDetailTemplate = (restaurant) => `
 const createItemTemplate = (restaurant) => `
   <div class="resto-item">
     <div class="resto-item__header">
-      <img class="resto-item__header__poster" alt="${restaurant.name || '-'}"
-           src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
+      <img class="resto-item__header__poster lazyload" alt="${restaurant.name || '-'}" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" type="jpg/webp">
       <div class="resto-item__header__rating">
         <p><i class="fa-sharp fa-solid fa-star"></i><span class="resto-item__header__rating__score">${restaurant.rating || '-'}</span></p>
       </div>

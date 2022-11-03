@@ -69,7 +69,6 @@ Scenario('searching restaurants', async ({ I }) => {
   I.pressKey('Enter');
 
   const visibleLikedRestaurants = await I.grabNumberOfVisibleElements('.resto-item');
-  console.log(visibleLikedRestaurants);
   assert.strictEqual(matchingRestaurants.length, visibleLikedRestaurants);
 
   matchingRestaurants.forEach(async (name, index) => {

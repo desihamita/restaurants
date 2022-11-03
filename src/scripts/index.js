@@ -4,10 +4,11 @@ import '../styles/style.css';
 import '../styles/responsive.css';
 import App from './views/app';
 import swRegister from './utils/sw-register';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 import '../components/HeroElement';
 import '../components/headline';
-import '../components/search';
 
 const app = new App({
   button: document.querySelector('#hamburgerButton'),
